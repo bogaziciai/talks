@@ -8,8 +8,12 @@ header-includes:
    \pagestyle{fancy}
    \setlength\headheight{28pt}
    \fancyhead[L]{\includegraphics[width=5cm]{../logo/logo-wide-transparent-gray.png}}
-   \fancyfoot[LE,RO]{GPIM}
-output: pdf_document
+output:
+  pdf_document:
+    citation_package: natbib
+  bookdown::pdf_book:
+    citation_package: biblatex
+bibliography: references.bib
 ---
 
 # The Opening
@@ -22,83 +26,94 @@ Today, we are going to talk about the role of Artificial Intelligence in busines
 
 Some facts before the start:
 
-- “The results of this year’s McKinsey Global Survey on artificial intelligence (AI) suggest that organizations are using AI as a tool for generating value. Increasingly, that value is coming in the form of revenues. A small contingent of respondents coming from a variety of industries attribute 20 percent or more of their organizations’ earnings before interest and taxes (EBIT) to AI. These companies plan to invest even more in AI in response to the COVID-19 pandemic and its acceleration of all things digital.” [6]
+-   "The results of this year's McKinsey Global Survey on artificial intelligence (AI) suggest that organizations are using AI as a tool for generating value. Increasingly, that value is coming in the form of revenues. A small contingent of respondents coming from a variety of industries attribute 20 percent or more of their organizations' earnings before interest and taxes (EBIT) to AI. These companies plan to invest even more in AI in response to the COVID-19 pandemic and its acceleration of all things digital." \[6\]
 
-- “50% of respondents report that their companies have adopted AI in at least one business function” [6]
+-   "50% of respondents report that their companies have adopted AI in at least one business function" \[6\]
 
 # AI Meaning Before & Today
 
-The history of AI as a scientific discipline dates back to the 50s [1]. What were the solutions back then, and how is it now with the current technologies?
+*What did AI mean to companies before, and what does today?*
 
-Most people use AI with Machine Learning interchangeably; however, simple process automation is also under the category of AI in business terminology. Davenport and Rajeev [4] frame AI under three categories: process automation (RPA), cognitive insight (insights from data), cognitive engagement (employees and customers).
+The history of AI as a scientific discipline dates back to the 50s [@Unesco]. What were the solutions back then, and how is it now with the current technologies?
+
+Most people use AI with Machine Learning interchangeably; however, simple process automation is also under the category of AI in business terminology. @hbr-realworld frame AI under three categories: process automation (RPA), cognitive insight (insights from data), cognitive engagement (employees and customers).
 
 # Problems in Businesses to solve with AI
 
-“Information-intensive domains such as marketing, health care, financial services, education, and professional services could become simultaneously more valuable and less expensive to society.” [4]
+*What are the problems in businesses in which current AI technologies have the potential to solve today?*
 
-Repeated tasks will probably be fully automatized or powered with AI to ease the work of the supervisors. “Cognitive technologies are also a catalyst for making other data-intensive technologies succeed, including autonomous vehicles, the Internet of Things, and mobile and multichannel consumer technologies.” [4]
+"Information-intensive domains such as marketing, health care, financial services, education, and professional services could become simultaneously more valuable and less expensive to society." [@hbr-realworld]
+
+Repeated tasks will probably be fully automatized or powered with AI to ease the work of the supervisors. "Cognitive technologies are also a catalyst for making other data-intensive technologies succeed, including autonomous vehicles, the Internet of Things, and mobile and multichannel consumer technologies." [@hbr-realworld]
 
 # Challenges in Businesses with AI
 
-Davenport and Rajeev [4] give a four-step framework for integrating AI:
-1.	Understanding The Technology:
--	Black-box models are problematic to interpret and disadvantageous over transparent rule-based expert models.
+*What are the challenges in businesses integrating AI into their operations?*
 
--	Understanding different technologies are key to choose the correct method for specific company needs.
+@hbr-realworld give a four-step framework for integrating AI:
 
--	Employees willing to learn and integrate are critical: “some will leap at the opportunities, while others will want to stick with tools they’re familiar with.”
+1.  Understanding The Technology:
 
--	Out-source is a sound option when the projects are short-term.
+-   Black-box models are problematic to interpret and disadvantageous over transparent rule-based expert models.
 
--	“Given the scarcity of cognitive technology talent, most organizations should establish a pool of resources—perhaps in a centralized function such as IT or strategy—and make experts available to high-priority projects throughout the organization.”
+-   Understanding different technologies are key to choose the correct method for specific company needs.
 
-2.	Creating a Portfolio of Projects
+-   Employees willing to learn and integrate are critical: "some will leap at the opportunities, while others will want to stick with tools they're familiar with."
 
--	Identifying the opportunities:
+-   Out-source is a sound option when the projects are short-term.
 
--- Bottlenecks: knowledge exists in the organization, but it is not optimally distributed (healthcare example).
+-   "Given the scarcity of cognitive technology talent, most organizations should establish a pool of resources---perhaps in a centralized function such as IT or strategy---and make experts available to high-priority projects throughout the organization."
 
--- Scaling challenges: knowledge exists, but the process for using it takes too long or is expensive to scale.
+2.  Creating a Portfolio of Projects
 
--- Inadequate firepower: there are terabytes of data but no human or computer resources to process.
+-   Identifying the opportunities:
 
--	Determining the use cases:
-Do we really need it? Which specific case do we have? Does it make sense competitively?
+    -   *Bottlenecks*: knowledge exists in the organization, but it is not optimally distributed (healthcare example).
 
--	Selecting the technology
-Does the technology mature enough to solve my problem? “It’s wiser to take incremental steps with the currently available technology while planning for transformational change in the not-too-distant future.”
+    -   *Scaling challenges*: knowledge exists, but the process for using it takes too long or is expensive to scale.
 
-3.	Launching Pilots
+    -   *Inadequate firepower*: there are terabytes of data but no human or computer resources to process.
 
-“Proof-of-concepts pilots are particularly suited to initiatives that have high potential business value or allow the organization to test different technologies at the same time.”
+-   Determining the use cases: Do we really need it? Which specific case do we have? Does it make sense competitively?
 
--	Business-process Design
-“Systematic redesign of workflows is necessary to ensure that humans and machines augment each other’s strengths and compensate for weaknesses.” The company can’t exploit full of the advantage by automatizing all workflows.
+-   Selecting the technology Does the technology mature enough to solve my problem? "It's wiser to take incremental steps with the currently available technology while planning for transformational change in the not-too-distant future."
 
-4.	Scaling Up
+3.  Launching Pilots
+
+"Proof-of-concepts pilots are particularly suited to initiatives that have high potential business value or allow the organization to test different technologies at the same time."
+
+-   Business-process Design "Systematic redesign of workflows is necessary to ensure that humans and machines augment each other's strengths and compensate for weaknesses." The company can't exploit full of the advantage by automatizing all workflows.
+
+4.  Scaling Up
 
 Is the pilot project feasible for scaling up? The company needs a solid plan and collaboration between technology experts and owners of the business process being automatized. A successful pilot project does not always guarantee to be effective at a large scale and possible to implement.
 
-
 # Guideline to Agents
 
-[5] highlights the challenge of changing the company’s culture rather than the technological capabilities. Most of the projects are stuck at ad-hoc pilots, and transitions are too slow because of cultural and organizational barriers.
+*What should business managers expect from an AI project? Which points are to consider?*
 
-“One of the biggest mistakes leaders make is to view AI as a plug-and-play technology with immediate returns.” [5] “While cutting-edge technology and talent are certainly needed, it’s equally important to align a company’s culture, structure, and ways of working to support broad AI adoption.” [5]
+@hbr-buildingai highlights the challenge of changing the company's culture rather than the technological capabilities. Most of the projects are stuck at ad-hoc pilots, and transitions are too slow because of cultural and organizational barriers.
+
+"One of the biggest mistakes leaders make is to view AI as a plug-and-play technology with immediate returns." [@hbr-buildingai] "While cutting-edge technology and talent are certainly needed, it's equally important to align a company's culture, structure, and ways of working to support broad AI adoption." [@hbr-buildingai]
 
 To scale up AI, companies must make three shifts:
 
-- From siloed work to interdisciplinary collaboration (take the full workflow into consideration)
+-   From siloed work to interdisciplinary collaboration (take the full workflow into consideration)
 
-- From experience-based, leader-driven decision making to data-driven decision making at the front line (invest in education and adoption)
+-   From experience-based, leader-driven decision making to data-driven decision making at the front line (invest in education and adoption)
 
-- From rigid and risk-averse to agile, experimental, and adaptable (normalize failure)
-Leaders need to tell a compelling story to employees to convince them AI will assist their job rather than taking it. ” (Our research shows that the majority of workers will need to adapt to using AI rather than be replaced by AI.)” [5] A relationship manager who thinks AI can’t substitute humans in understanding the customer may also hamper the processes.
+-   From rigid and risk-averse to agile, experimental, and adaptable (normalize failure) Leaders need to tell a compelling story to employees to convince them AI will assist their job rather than taking it. "Our research shows that the majority of workers will need to adapt to using AI rather than be replaced by AI." [@hbr-buildingai] A relationship manager who thinks AI can't substitute humans in understanding the customer may also hamper the processes.
 
-“In other cases, siloed processes can inhibit the broad adoption of AI. Organizations that assign budgets by function or business unit may struggle to assemble interdisciplinary agile teams, for example.” [5] Budgeting at least as much for integration and adoption as for technology is crucial. “90% of the companies that had engaged in successful scaling practices had spent more than half of their analytics budgets on activities that drove adoption, such as workflow design, communication, and training.“
+"In other cases, siloed processes can inhibit the broad adoption of AI. Organizations that assign budgets by function or business unit may struggle to assemble interdisciplinary agile teams, for example." [@hbr-buildingai] Budgeting at least as much for integration and adoption as for technology is crucial. "90% of the companies that had engaged in successful scaling practices had spent more than half of their analytics budgets on activities that drove adoption, such as workflow design, communication, and training."
 
-“Organizations needn’t focus solely on quick wins; they should develop a portfolio of initiatives with different time horizons. Automated processes that don’t need human intervention, such as AI-assisted fraud detection, can deliver a return in months, while projects that require human involvement, such as AI-supported customer service, are likely to pay off over a longer period.”
+"Organizations needn't focus solely on quick wins; they should develop a portfolio of initiatives with different time horizons. Automated processes that don't need human intervention, such as AI-assisted fraud detection, can deliver a return in months, while projects that require human involvement, such as AI-supported customer service, are likely to pay off over a longer period."
 
 # Guideline to Employees
 
+*What should employees expect from an AI project? How should they direct the project and the expectations?*
+
 # Guideline to Customers
+
+*What should customers (B2B or B2C) expect from AI-powered products?*
+
+# Resources
